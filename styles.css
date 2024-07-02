@@ -199,8 +199,8 @@ header {
   }
   .my{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content:space-around;
     flex-direction: row;
     background-color: rgb(17,17,17);
     position: fixed;
@@ -214,7 +214,7 @@ header {
    margin: auto;
   }
   .mytime {
-    width: 25vw;
+    width: 30%;
     height: 50vh;
     position: fixed;
     left: 2px;
@@ -224,7 +224,7 @@ header {
     position: static;
     margin: 35px auto;
     height:14vw;
-    width: 24vw;
+    width: 60%;
 
   }
  }
