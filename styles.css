@@ -230,7 +230,7 @@ h3 {
 .line-title {
   position: relative;
   color: white;
-  width: 400px;
+  width: 100%;
 }
 /* .line-title::before,
 .line-title::after {
@@ -253,7 +253,7 @@ h3 {
 /******* Middle section CSS Start ******/
 /* -------- Landing page ------- */
 .game-section {
-  padding: 15vh 50px;
+  padding: 5vh 50px;
   max-height: 100vh;
   margin-top: 12vh;
 }
@@ -263,6 +263,8 @@ h3 {
   flex-wrap: wrap;
   display: -webkit-flex;
   width: 100vw;
+  justify-content: center;
+  align-items: center;
   /* overflow-x:scroll; */
 }
 .owl-theme{
@@ -350,7 +352,7 @@ h3 {
 
   /* -------- Landing page ------- */
   .game-section {
-    padding: 50px 30px;
+    /* padding: 50px 30px; */
   }
   .game-section .item {
     margin: 0 12px 60px;
