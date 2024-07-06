@@ -17,6 +17,7 @@ body {
 header {
   background-color: rgb(41, 41, 41);
   position: fixed;
+  z-index: 99;
   top: 0;
   height: 12vh;
   width: 100%;
@@ -74,6 +75,7 @@ header {
   width: 30vw;
   max-height: 12vh;
   position: fixed;
+  z-index: 9999;
   left: 0;
   top: 0;
   display: flex;
@@ -117,6 +119,7 @@ header {
 .my {
   background-color: rgb(41,41,41);
   position: fixed;
+  z-index: 999999;
   bottom: 0;
   height: 7 vh;
   width: 100%;
