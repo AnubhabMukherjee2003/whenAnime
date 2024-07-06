@@ -152,6 +152,9 @@ header {
   #clock{
     font-size: 1em;
   }
+  .item{
+    width: 60%;
+  }
 }
 
 
@@ -252,7 +255,7 @@ h3 {
 .game-section {
   padding: 15vh 50px;
   max-height: 100vh;
-
+  margin-top: 12vh;
 }
 .game-section .owl-theme{
   margin: 15px 0;
