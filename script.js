@@ -31,6 +31,13 @@ async function logAnimes() {
             let a = [];
             a.push(arr[0]);
             arr.forEach(element => {
+                
+                if(element.broadcast.time==null){
+                    element.broadcast.time="00:00"
+                }
+
+
+
                 let c = 0;
                 a.forEach(e => {
                     if (e.mal_id === element.mal_id) {
@@ -94,7 +101,7 @@ async function logAnimes() {
                 return localTimeString;
             }
             animeItemn.style.backgroundImage=`url("${element.images.jpg.large_image_url}")`
-            animeItemn.innerHTML =`<div class="item-desc"><h3>${element.title}</h3><p>${convertJSTToLocal(element.broadcast.time)}(JST)</p></div>`;
+            animeItemn.innerHTML =`<div class="item-desc"><h3>${element.title}<p>${convertJSTToLocal(element.broadcast.time)}(JST)</p></h3></div>`;
             if (animeList) {
                 animeList.appendChild(animeItemn);
             } else {

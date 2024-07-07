@@ -412,7 +412,7 @@ h3 {
     line-height: 24px;
   }
   .line-title {
-    width: 250px;
+    width: 100%;
   }
 
   /* -------- Landing page ------- */
