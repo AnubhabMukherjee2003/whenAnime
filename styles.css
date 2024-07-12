@@ -1,300 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-  margin: 0px;
-  padding: 0px;
+*{
+  margin: 0;
+  border: 0;
   box-sizing: border-box;
-  list-style: none;
-  font-family: "Poppins", sans-serif;
-  text-decoration: none;
 }
 
-body {
-  background-color: rgb(17, 17, 17);
-  color: rgb(0, 0, 0);
-}
-
-header {
-  background-color: rgb(41, 41, 41);
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  height: 12vh;
+body{
+  height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all .50s ease;
-  border-bottom: 1px solid white;
+  background-color: rgb(17, 17, 17);
+  color: white;
 }
 
-.logo{
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  transition: all .50 ease;
-  margin: auto;
+header{
+  width: 100%;
+    height: 10%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/img1.jpeg);
+    /* opacity: 0.7; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 1s infinite ;
 }
-
-
-
-.anime-list {
-  /* max-height: 80vh;
-  overflow-y: auto; */
+@keyframes change {
+  0%{
+    background-image: url(images/img1.jpeg);
+  }
+  20%{
+    background-image: url(images/img2.jpeg);
+  }
+  40%{
+    background-image: url(images/img3.jpeg);
+  }
+  60%{
+    background-image: url(images/img4.jpeg);
+  }
+  80%{
+    background-image: url(images/img5.jpeg);
+  }
+  100%{
+    background-image: url(images/img6.jpeg);
+  }
+}
+.title{
+  margin: auto auto;
+  height: 100%;
+  color: white;
   display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
+  font-size: 2em;
+  /* flex-wrap: wrap; */
+  /* opacity: 1;; */
 }
-
-.anime-item {
-  background-color: #eaeff0;
-  border-radius: 4px;
-  margin: 10px;
-  padding: 10px;
-  width: 150px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.anime-item img {
-  max-width: 100%;
-  border-radius: 4px;
-}
-
-.anime-title {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-
-
-
-.mytime {
-  width: 30vw;
-  max-height: 12vh;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
+.main{
   display: flex;
-  flex-direction: column;
-  border-right: 1px solid white;
-  overflow: auto;
-  padding: 2px;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 85%;
+  padding: 5px;
+  flex-wrap:wrap;
 }
-*::-webkit-scrollbar{
+footer{
+  height: 5%;
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.animeday{
+  height: 80vh;
+  background-color:  rgb(41, 41, 41);
+  width: 14%;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.day{
+  background-color: black;
+  text-align: center;
+  height: 7%;
+  border-radius: 10px;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.anime{
+  height: 93%;
+  width: 103%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0;
+  margin: 2px;
+}
+.anime::-webkit-scrollbar{
   visibility: hidden;
 }
-#clock {
-  font-size: 3em;
-  color: white;
-  margin: 0 auto;
-  height: 60%;
-  /* padding-top: 2px; */
-}
-
-.mine {
-  color: white;
-  margin: 0 auto;
-  text-align: center;
-  height: 40%;
-}
-
-.myera{
-  width: 30vw;
-  height: 12vh;
-  position: fixed;
-  right: 0;
-  top: 0;
-  border-left: 1px solid white;
-  color: #fff;
-  padding: 2%;
-  text-align: center;
-  margin: auto auto;
-}
-
-
-.my {
-  background-color: rgb(41,41,41);
-  position: fixed;
-  z-index: 999999;
-  bottom: 0;
-  height: 7 vh;
-  width: 100%;
-  /* position: fixed;
-  right: 0;
-  top: 20%; */
+.item {
+  /* margin-bottom: 10px;
+  padding-bottom: 10px; */
+  margin: 20px auto;
+  width: 95%;
+  height: 50%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  /* flex-wrap: wrap; */
-  /* flex-direction: column; */
-  gap: 20px;
-  padding: 1vh 0px;
-}
-.mymine{
-  margin: auto;
-}
-.fa-brands{
-  color: white;
-  font-size: 20px;
-  /* gap: 10px; */
-  margin: 0px 7vw;
-}
-
-
-@media only screen and (max-width: 500px) {
-  .mytime{
-    width: 20vw;
-  }
-  #clock{
-    font-size: 1em;
-  }
-  .item{
-    width: 60%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-/******* Fonts Import Start **********/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-/********* Fonts Face CSS End **********/
-
-/******* Common Element CSS Start ******/
-/* * {
-  margin: 0px;
-  padding: 0px;
-}
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-} */
-/* .clear {
-  clear: both;
-} */
-img {
-  max-width: 100%;
-  border: 0px;
-}
-/* ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-  outline: none;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-}
-a:focus,
-a:active,
-a:visited,
-a:hover {
-  text-decoration: none;
-  outline: none;
-}
-a:hover {
-  color: #e73700;
-} */
-h2 {
-  margin-bottom: 48px;
-  padding-bottom: 16px;
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 700;
-  position: relative;
-  text-transform: capitalize;
-}
-h3 {
-  margin: 0 0 10px;
-  font-size: 28px;
-  line-height: 36px;
-}
-/* button {
-  outline: none !important;
-} */
-/******* Common Element CSS End *********/
-
-/* -------- title style ------- */
-.line-title {
-  position: relative;
-  color: white;
-  width: 100%;
-}
-/* .line-title::before,
-.line-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  border-radius: 2px;
-}
-.line-title::before {
-  width: 100%;
-  background: #f2f2f2;
-}
-.line-title::after {
-  width: 32px;
-  background: #e73700;
-} */
-
-/******* Middle section CSS Start ******/
-/* -------- Landing page ------- */
-.game-section {
-  padding: 5vh 50px;
-  max-height: 100vh;
-  margin-top: 12vh;
-}
-.game-section .owl-theme{
-  margin: 15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  display: -webkit-flex;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  /* overflow-x:scroll; */
-}
-.owl-theme{
-  overflow-x: auto;
-}
-.game-section .item {
-  margin: 0 15px 60px;
-  width: 320px;
-  height: 400px;
-  display: flex;
-  display: -webkit-flex;
   align-items: flex-end;
-  -webkit-align-items: flex-end;
   background: #343434 no-repeat center center / cover;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
   transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  cursor: pointer;
+  /* -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer; */
 }
-.item{
-  
-}
-.game-section .item.active {
-  width: 500px;
-  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-}
-.game-section .item:after {
+
+.item:after {
   content: "";
   display: block;
   position: absolute;
@@ -304,134 +127,38 @@ h3 {
   top: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
-.game-section .item-desc {
-  /* padding: 0 24px 12px; */
+
+.item-desc {
+  /* height: 15%; */
+  padding: 25px 25px;
+  bottom: 0;
   color: #fff;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  /* transform: translateY(calc(100% - 54px)); */
-  /* -webkit-transform: translateY(calc(100% - 54px)); */
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
-.game-section .item.active .item-desc {
-  transform: none;
-  -webkit-transform: none;
+
+.item-desc h3{
+  margin-bottom: 0;
 }
-.game-section .item-desc p {
+
+.item-desc p {
   /* opacity: 0; */
-  /* -webkit-transform: translateY(32px); */
-  /* transform: translateY(32px); */
+  padding-bottom: 10px;
+  bottom: 0;
+  margin-top: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
   transition: all 0.4s ease-in-out 0.2s;
-  /* -webkit-transition: all 0.4s ease-in-out 0.2s; */
-}
-.game-section .item.active .item-desc p {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-.game-section .owl-theme.custom-carousel .owl-dots {
-  margin-top: -20px;
-  position: relative;
-  z-index: 5;
-}
-/******** Middle section CSS End *******/
-
-/***** responsive css Start ******/
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  h2 {
-    margin-bottom: 32px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    /* padding: 50px 30px; */
-  }
-  .game-section .item {
-    margin: 0 12px 60px;
-    width: 260px;
-    height: 360px;
-  }
-  .game-section .item.active {
-    width: 400px;
-  }
-  .game-section .item-desc {
-    transform: translateY(calc(100% - 46px));
-    -webkit-transform: translateY(calc(100% - 46px));
-  }
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  h2 {
-    margin-bottom: 32px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .line-title {
-    width: 330px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 50px 30px 40px;
-  }
-  .game-section .item {
-    margin: 0 12px 60px;
-    width: 240px;
-    height: 330px;
-  }
-  .game-section .item.active {
-    width: 360px;
-  }
-  .game-section .item-desc {
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  }
-}
-
-@media (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-  h2 {
-    margin-bottom: 20px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 19px;
-    line-height: 24px;
-  }
-  .line-title {
-    width: 100%;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 30px 15px 20px;
-  }
-  .game-section .item {
-    margin: 0 10px 40px;
-    width: 200px;
-    height: 280px;
-  }
-  .game-section .item.active {
-    width: 270px;
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-  }
-  .game-section .item-desc {
-    padding: 0 14px 5px;
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
+@media (max-width: 450px) {
+  .main{
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 85%;
   }
 }
