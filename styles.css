@@ -157,8 +157,12 @@ footer{
 
 @media (max-width: 450px) {
   .main{
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    min-height: 85%;
+    max-height: 85%;
+  }
+  .animeday{
+    width: 100%;
   }
 }
