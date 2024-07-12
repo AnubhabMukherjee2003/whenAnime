@@ -160,7 +160,7 @@ footer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 85%;
+    min-height: 85%;
   }
   .animeday{
     width: 100%;
