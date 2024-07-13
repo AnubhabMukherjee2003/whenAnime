@@ -107,5 +107,5 @@ async function logAnimes(day) {
 weekday.forEach((element,index) => {
     setTimeout(() => {
         logAnimes(element);
-    }, index* 5000);
+    }, index* 700);
 });
