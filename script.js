@@ -1,6 +1,12 @@
 
 
-const weekday = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+const wee = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+const d = new Date();
+let day = wee[d.getDay()].toLowerCase();
+const a = document.querySelector(`.${day} .day`);
+console.log(a)
+a.style.backgroundColor= "white",
+a.style.color= "black"
 // const d = new Date();
 // let day = weekday[d.getDay()].toLowerCase(); // Convert day to lowercase for API filter
 // const api = `https://api.jikan.moe/v4/schedules?filter=${day}`;
@@ -104,8 +110,17 @@ async function logAnimes(day) {
 }
 
 // document.addEventListener('DOMContentLoaded', logAnimes(day)); // Ensure DOM is loaded before running the function
-weekday.forEach((element,index) => {
-    setTimeout(() => {
-        logAnimes(element);
-    }, index* 700);
-});
+function updateWeekArray() {
+    const week = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+    const todayIndex = new Date().getDay(); // Get today's day index (0 = Sunday, 1 = Monday, etc.)
+    
+    // Rearrange the week array so that today's day is the first element
+    const updatedWeek = week.slice(todayIndex).concat(week.slice(0, todayIndex));
+    
+    return updatedWeek;
+  }
+  updateWeekArray().forEach((element,index) => {
+      setTimeout(() => {
+          logAnimes(element);
+      }, index* 700);
+  });
