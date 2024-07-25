@@ -156,7 +156,7 @@ footer{
   -webkit-transition: all 0.4s ease-in-out 0.2s;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .main{
     display: flex;
     flex-direction: column;
@@ -164,6 +164,6 @@ footer{
     min-height: 85%;
   }
   .animeday{
-    width: 70%;
+    width: 90%;
   }
 }
